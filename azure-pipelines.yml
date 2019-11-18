@@ -15,6 +15,7 @@ jobs:
   - script: |
       npm install
       npm run build
+      sudo apt-get -qq install g++-multilib
     displayName: 'npm install and build'
   - script: |
       npx prebuild --all -u $GITHUB_RELEASE_TOKEN

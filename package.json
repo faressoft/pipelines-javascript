@@ -10,16 +10,19 @@
   },
   "dependencies": {
     "express": "^4.13.3",
-    "mocha": "^3.0.0"
+    "mocha": "^3.0.0",
+    "prebuild-install": "^5.3.3"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-istanbul": "^1.1.3",
     "gulp-mocha": "^2.2.0",
-    "mocha-junit-reporter": "^1.12.0", 
-    "gulp-istanbul": "^1.1.3", 
-    "nyc": "^12.0.2" 
+    "mocha-junit-reporter": "^1.12.0",
+    "nyc": "^12.0.2",
+    "prebuild": "^9.1.1"
   },
   "scripts": {
+    "install": "prebuild-install",
     "build": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
   }
 }

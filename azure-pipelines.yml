@@ -13,9 +13,9 @@ jobs:
       versionSpec: '10.x'
     displayName: 'Install Node.js'
   - script: |
+      sudo apt-get -qq install g++-multilib
       npm install
       npm run build
-      sudo apt-get -qq install g++-multilib
     displayName: 'npm install and build'
   - script: |
       npx prebuild --all -u $GITHUB_RELEASE_TOKEN
